@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Coutinho - A loja virtual</title>
+</head>
+
+<style>
+    .produtos {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        width: 200px;
+        padding: 15px;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0 0 10px #0002;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .btn-comprar {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 10px;
+        background: #25d366;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-comprar:hover {
+        background: #1ebe5d;
+    }
+</style>
+
+<body>
+
+    <div class="produtos">
+
+        <div class="card">
+
+            <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+            
+            <h3>Fone de ouvido TWS</h3>
+
+            <p>Descrição do produto 1</p>
+
+            <button class="btn-comprar" data-produto="Fone de ouvido TWS">Comprar</button>
+
+        </div>
+
+        <div class="card">
+            <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+            <h3>Garrafinha com base</h3>
+
+            <p>Descrição do produto 2</p>
+
+            <button class="btn-comprar" data-produto="Garrafinha com base">Comprar</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+            <h3>Power Bank 5000mAh</h3>
+
+            <p>Descrição do produto 3</p>
+
+            <button class="btn-comprar" data-produto="Power Bank 5000mAh">Comprar</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const numeroWhatsApp = "988671941"; // <- SEU NÚMERO
+
+    document.querySelectorAll(".btn-comprar").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const produto = btn.getAttribute("data-produto");
+
+            const mensagem = `Olá Marcos! \nTenho interesse em comprar o *${produto}* \n ainda está disponível?.`;
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+            window.open(url, "_blank");
+        });
+    });
+
+</script>
+
+</html>
