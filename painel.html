@@ -80,6 +80,7 @@
     <main class="page">
 
         <section class="produtos" id="produtos">
+
             <div class="info-pdt-cards">
                 <div class="info-card" id="estoque">
 
@@ -93,39 +94,39 @@
                 </div>
             </div>
 
-            <div class="tabela-container">
+            <!-- <div class="tabela-container">
 
                 <table class="tabela-estilo">
                     <thead>
                         <tr>
                             <th>Produto</th>
-                            <!-- <th>Categoria</th> -->
+
                             <th>Preço</th>
-                            <!-- <th>Status</th> -->
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td id="nome-do-produto-table">a</td>
-                            <!-- <td>a</td> -->
+
                             <td id="preco-do-produto-table">R$ 0,00</td>
-                            <!-- <td><span class="status ativo">Ativo</span></td> -->
+
                         </tr>
                         <tr>
                             <td id="nome-do-produto-table">b</td>
-                            <!-- <td>b</td> -->
+
                             <td id="preco-do-produto-table">R$ 0,00</td>
-                            <!-- <td><span class="status inativo">Inativo</span></td> -->
+
                         </tr>
                         <tr>
                             <td id="nome-do-produto-table">c</td>
-                            <!-- <td>c</td> -->
+
                             <td id="preco-do-produto-table">R$ 0,90</td>
-                            <!-- <td><span class="status ativo">Ativo</span></td> -->
+
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
 
         </section>
 
@@ -140,13 +141,13 @@
                         <i class="bi bi-image"></i>
                         <span>Adicione uma imagem</span>
 
-                        <input type="file" name="" id="file" hidden>
+                        <input type="file" name="" id="file" hidden required>
 
                     </label>
 
-                    <input type="text" name="" id="nome-do-produto" placeholder="Nome do produto">
+                    <input type="text" name="" id="nome-do-produto" placeholder="Nome do produto" required>
 
-                    <input type="text" name="" id="preco-do-produto" placeholder="Valor do produto">
+                    <input type="text" name="" id="preco-do-produto" placeholder="Valor do produto" required>
 
                     <button class="submit" id="submit">Criar</button>
 

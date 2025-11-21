@@ -12,7 +12,7 @@ function atualizarDataHora() {
     const min = String(data.getMinutes()).padStart(2, "0");
 
     // elemento.textContent = `${dia}/${mes}/${ano}`;
-    elemento.textContent = `${dia}/${mes}/${ano} —  ${hora}:${min}`;
+    elemento.textContent = `${dia}/${mes}/${ano} |  ${hora}:${min}`;
 }
 
 setInterval(atualizarDataHora, 1000);

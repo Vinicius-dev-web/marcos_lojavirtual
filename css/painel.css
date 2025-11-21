@@ -68,14 +68,18 @@ body {
                 /* background-color: var(--cor-btn3); */
 
                 &:hover {
-                    background-color: var(--cor-btn3);
+                    background-color: var(--cor-borda1);
                 }
 
             }
 
             li.active {
-                background: #6a11cb22;
-                border-left: 4px solid #6a11cb;
+                /* background: #6a11cb22; */
+                /* border-left: 4px solid #6a11cb; */
+
+                background: var(--cor-fundo5);
+                border-left: 4px solid var(--cor-borda2);
+
                 padding-left: 12px;
             }
         }
