@@ -13,12 +13,20 @@
     --cor-terciárias: #6C63FF;
     --cor-quaternárias: #00FF6F;
 
-    --cor-alternativo: #E8F0FE;
+    --cor-fundo1: #1448E6;
+    --cor-fundo2: #3478F7;
+    --cor-fundo3: #020618;
+    --cor-fundo4: #0F172B;
 
-    --fundo-primario-dark: #1f1f1f;
-    --fundo-secundario-dark: #2B3035;
+    --cor-branco: #FFFFFF;
+    --cor-vermelho: #E7000B;
+    --cor-vermelho-escuro: #C10007;
+
+    --cor-alternativo: #E8F0FE;
 
     --cor-btn1: #25d366;
     --cor-btn2: #5F58D9;
+    --cor-btn3: #1D293D;
+
 
 }

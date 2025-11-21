@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/painel.css">
+
+    <title>Painel de controle</title>
+
+</head>
+
+<body>
+
+    <div class="painel">
+
+        <div class="painel-info">
+
+            <h1>MarcosTech</h1>
+    
+            <ul>
+                <li>Produtos</li>
+                <li>Banners</li>
+                <li>Configurações</li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+
+        <!-- <button>sair</button> -->
+
+        <div class="logout" id="logout" onclick="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>SAIR</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <h1>Marcos</h1>
+        <span>Administrador</span>
+    </nav>
+    
+    <main>
+
+    </main>
+    
+</body>
+
+<script>
+
+    function logout(){
+        location.href = "login.html"
+    }
+</script>
+
+</html>

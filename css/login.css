@@ -1,0 +1,148 @@
+body {
+    background-color: var(--cor-fundo1);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    form {
+
+        display: flex;
+        flex-direction: column;
+
+        /* text-align: center; */
+        /* border: 1px solid #ccc; */
+
+        padding: 40px;
+        height: 400px;
+
+        h1 {
+            text-align: center;
+            color: var(--cor-branco);
+
+            font-size: 50px;
+
+            margin-bottom: 30px;
+        }
+
+        input {
+
+            width: 450px;
+            padding: 17px;
+            margin: 10px 0px;
+
+            font-size: 16px;
+
+            border-radius: 8px;
+
+            color: var(--cor-branco);
+            background-color: var(--cor-fundo1);
+            border: 2px solid var(--cor-fundo2);
+
+            outline: none;
+
+            &:focus {
+                border: 2px solid var(--cor-btn2);
+            }
+        }
+
+        button {
+            background-color: var(--cor-branco);
+
+            width: 450px;
+            padding: 17px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+
+            color: var(--cor-fundo1);
+
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--cor-alternativo);
+            }
+        }
+    }
+
+}
+
+#error {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* text-align: center; */
+
+            h1 {
+                text-align: center;
+                color: var(--cor-branco);
+
+                font-size: 50px;
+
+                margin-bottom: 30px;
+            }
+
+            input {
+
+                width: 350px;
+                padding: 17px;
+                margin: 10px 0px;
+
+                font-size: 16px;
+
+                border-radius: 8px;
+
+                color: var(--cor-branco);
+                background-color: var(--cor-fundo1);
+                border: 2px solid var(--cor-fundo2);
+
+                outline: none;
+
+                &:focus {
+                    border: 2px solid var(--cor-btn2);
+                }
+            }
+
+            button {
+                background-color: var(--cor-branco);
+
+                width: 350px;
+                padding: 17px;
+                margin-bottom: 15px;
+                border-radius: 8px;
+
+                color: var(--cor-fundo1);
+
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--cor-alternativo);
+                }
+            }
+        }
+
+    }
+}
