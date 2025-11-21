@@ -2,17 +2,38 @@ body {
     background-color: var(--cor-fundo3);
 }
 
+/* Seções começam escondidas */
+.page section {
+    display: none;
+}
+
+/* Aba ativa */
+.page section.active {
+    display: block;
+}
+
+/* Estilo do item ativo no menu */
+.painel-info ul li.active {
+    background: #6a11cb22;
+    border-left: 4px solid #6a11cb;
+    padding-left: 12px;
+}
+
 
 .painel {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     z-index: 2;
+
+    width: 250px;
+    max-width: 300px;
 
     padding: 40px;
     margin-right: 200rem;
@@ -21,6 +42,7 @@ body {
 
     color: var(--cor-branco);
     background-color: var(--cor-fundo4);
+    border-right: 1px solid var(--cor-borda1);
 
     .painel-info {
 
@@ -38,6 +60,8 @@ body {
                 padding: 15px;
                 margin: 10px 0px;
                 cursor: pointer;
+
+                width: 100%;
 
                 border-radius: 10px;
 
@@ -74,24 +98,98 @@ nav {
     background-color: var(--cor-fundo4);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
 
+    /* flex-direction: column; */
+
+    width: calc(100% - 250px);
+    /* 
     position: fixed;
     left: 0;
     top: 0;
-    right: 0;
+    right: 0; */
 
-    padding: 10px;
+    padding: 20px;
 
     color: var(--cor-branco);
 
+    margin-left: 250px;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--cor-borda1);
+
+    /* empurra para a direita do sidebar */
     /* margin-left: 16.5rem; */
+
+    .info-now-up{
+
+        padding: 15px;
+
+        border: 1px solid var(--cor-borda1);
+        border-radius: 15px;
+
+        background-color: var(--cor-fundo4);
+    }
+
+    .info-now-up{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span{
+            margin-right: 10px;
+        }
+
+        i{
+            font-size: 30px;
+        }
+    }
 }
 
 main {
-    margin: 0rem 20rem;
+    margin: 5rem 25rem;
     color: var(--cor-branco);
+
+    .produtos {
+
+        .info-pdt-cards {
+            display: flex;
+
+            .info-card {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                width: 250px;
+                height: 150px;
+
+                max-width: 250px;
+                max-height: 150px;
+
+                min-width: 200px;
+                min-height: 100px;
+
+                padding: 30px;
+
+                border-radius: 20px;
+                border: 1px solid var(--cor-borda1);
+
+                background: linear-gradient(to right, #AA43FF, #8505DE);
+
+                .title-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                /* span{
+                } */
+            }
+        }
+
+    }
 
 }

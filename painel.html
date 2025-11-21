@@ -27,14 +27,26 @@
         <div class="painel-info">
 
             <h1>MarcosTech</h1>
-    
+
             <ul>
-                <li>Produtos</li>
-                <li>Banners</li>
-                <li>Configurações</li>
-                <li></li>
-                <li></li>
+                <li data-target="produtos">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>PRODUTOS</span>
+                </li>
+                <li data-target="banners">
+                    <i class="bi bi-images"></i>
+                    <span>BANNERS</span>
+                </li>
+                <li data-target="users">
+                    <i class="bi bi-people"></i>
+                    <span>USUÁRIOS</span>
+                </li>
+                <li data-target="cog">
+                    <i class="bi bi-building"></i>
+                    <span>EMPRESA</span>
+                </li>
             </ul>
+
 
         </div>
 
@@ -47,23 +59,58 @@
 
     </div>
 
-    <nav>
+    <nav class="main-content">
 
-        <h1>Marcos</h1>
-        <span>Administrador</span>
+        <div class="adm-info-up">
+
+            <h1>Marcos</h1>
+            <span>Administrador</span>
+
+        </div>
+
+        <div class="info-now-up">
+
+            <span id="dataAtual"></span>
+            <i class="bi bi-cloud"></i>
+
+        </div>
+
     </nav>
-    
-    <main>
+
+    <main class="page">
+
+        <section class="produtos" id="produtos">
+            <div class="info-pdt-cards">
+                <div class="info-card" id="estoque">
+
+                    <div class="title-card">
+                        <h2>Estoque</h2>
+                        <i class="bi bi-archive"></i>
+                    </div>
+
+                    <span class="qntd-prod" id="qntd-prod"><b>0</b></span>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="banners" id="banners"></section>
+        <section class="users" id="users"></section>
+        <section class="cog" id="cog"></section>
 
     </main>
-    
+
+
 </body>
 
 <script>
 
-    function logout(){
+    function logout() {
         location.href = "login.html"
     }
 </script>
+
+<script src="js/painel.js"></script>
+<script src="js/datas.js"></script>
 
 </html>
