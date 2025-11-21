@@ -18,10 +18,12 @@
     --cor-fundo3: #020618;
     --cor-fundo4: #0F172B;
     --cor-fundo5: #1D293D;
+    --cor-fundo6: #164EE9;
 
     --cor-branco: #FFFFFF;
     --cor-vermelho: #E7000B;
     --cor-vermelho-escuro: #C10007;
+    --cor-laranja: #FF8904;
 
     --cor-alternativo: #E8F0FE;
 
@@ -30,6 +32,6 @@
     --cor-btn3: #1D293D;
 
     --cor-borda1: #1D293D;
-
+    --cor-borda2: #337AFB;
 
 }

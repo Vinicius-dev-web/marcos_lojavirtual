@@ -1,5 +1,6 @@
 body {
-    background-color: var(--cor-fundo1);
+    /* background-color: var(--cor-fundo1); */
+    background: linear-gradient(to right, #155CFB, #193DBC);
 }
 
 .form {
@@ -20,35 +21,79 @@ body {
         padding: 40px;
         height: 400px;
 
-        h1 {
+        span {
             text-align: center;
             color: var(--cor-branco);
 
             font-size: 50px;
 
             margin-bottom: 30px;
+
+            font-family: "Raleway", sans-serif;
         }
 
-        input {
+        label {
+
+            display: flex;
+            align-items: center;
 
             width: 450px;
-            padding: 17px;
-            margin: 10px 0px;
 
-            font-size: 16px;
+            margin: 10px 0px;
+            font-size: 20px;
 
             border-radius: 8px;
 
             color: var(--cor-branco);
-            background-color: var(--cor-fundo1);
+
+            background: linear-gradient(to right, #1553F2, #164EE9);
+
+            /* background-color: var(--cor-fundo1); */
             border: 2px solid var(--cor-fundo2);
 
             outline: none;
+            cursor: pointer;
 
             &:focus {
-                border: 2px solid var(--cor-btn2);
+                border: 2px solid var(--cor-fundo2);
+            }
+
+            i {
+                color: var(--cor-borda2);
+                margin-left: 20px;
+            }
+
+            input {
+
+                width: 90%;
+
+
+                padding: 17px;
+                font-size: 15px;
+
+                color: var(--cor-branco);
+
+                background: transparent;
+                border: none;
+                outline: none;
+
+                &::placeholder {
+                    color: var(--cor-borda2);
+                }
+
+                &:-webkit-autofill {
+                    -webkit-text-fill-color: #fff !important;
+
+                    box-shadow: 0 0 0 1000px var(--cor-fundo2) inset !important;
+
+                    border: none;
+                    border-radius: 0px;
+
+                }
+
             }
         }
+
 
         button {
             background-color: var(--cor-branco);
