@@ -24,7 +24,11 @@
 <body>
 
     <nav>
-        <input type="text" placeholder="Pesquise aqui">
+
+        <label for="search">
+            <i class="bi bi-search"></i>
+            <input type="text" id="search" placeholder="Buscar produto ou palavra-chave">
+        </label>
 
         <div class="bag-area">
             <i class="bi bi-handbag-fill" id="abrirCarrinho"></i>
@@ -32,9 +36,8 @@
         </div>
     </nav>
 
-
-
     <!-- ----------- CARRINHO ----------- -->
+
     <div id="carrinho">
         <button id="fecharCarrinho">
             <i class="bi bi-x-lg"></i>
@@ -45,27 +48,33 @@
         <button class="btn-finalizar" id="btnFinalizar">Finalizar Pedido</button>
     </div>
 
-    <div class="produtos">
+    <main class="page" id="page">
 
-        <div class="card">
-            <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
-            <h3>Fone de ouvido TWS</h3>
-            <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+
+        <!-- ----------- Produtos ----------- -->
+
+        <div class="produtos">
+
+            <div class="card">
+                <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+                <h3>Fone de ouvido TWS</h3>
+                <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+                <h3>Garrafinha com base</h3>
+                <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+                <h3>Power Bank 5000mAh</h3>
+                <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+            </div>
+
         </div>
-
-        <div class="card">
-            <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
-            <h3>Garrafinha com base</h3>
-            <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="card">
-            <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
-            <h3>Power Bank 5000mAh</h3>
-            <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
-        </div>
-
-    </div>
+    </main>
 
     <script src="js/compras.js"></script>
 
