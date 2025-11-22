@@ -28,6 +28,8 @@
         <label for="search">
             <i class="bi bi-search"></i>
             <input type="text" id="search" placeholder="Buscar produto ou palavra-chave">
+
+            <button type="submit" onclick="admlogin()">| Buscar</button>
         </label>
 
         <div class="bag-area">
@@ -42,9 +44,10 @@
 
             <div class="info-client">
 
-                <img src="" alt="sem foto">
+                <img src="https://img.myloview.com.br/posters/funny-cartoon-monster-face-vector-monster-square-avatar-700-196485313.jpg"
+                    alt="sem foto">
 
-                <h2>Nome</h2>
+                <h4>User-1b7cxyz4</h4>
 
             </div>
 
@@ -98,40 +101,183 @@
         <button class="btn-finalizar" id="btnFinalizar">Finalizar Pedido</button>
     </div>
 
-    <header>
-        <img src="https://files.tecnoblog.net/wp-content/uploads/2025/06/Capa-TBR-Eletronicos-de-Consumo-1060x596.png" alt="Sem foto">
-    </header>
-
     <main class="page" id="page">
 
 
+        <section class="home" id="home"></section>
         <!-- ----------- Produtos ----------- -->
 
         <section class="produtos" id="produtos">
 
-            <div class="card">
-                <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
-                <h3>Fone de ouvido TWS</h3>
-                <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
-            </div>
+            <header>
+                <img src="https://files.tecnoblog.net/wp-content/uploads/2025/06/Capa-TBR-Eletronicos-de-Consumo-1060x596.png"
+                    alt="Sem foto">
+            </header>
 
-            <div class="card">
-                <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
-                <h3>Garrafinha com base</h3>
-                <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
-            </div>
+            <h1>Produtos</h1>
 
-            <div class="card">
-                <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
-                <h3>Power Bank 5000mAh</h3>
-                <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+            <div class="cards-prods">
+
+                <div class="card">
+                    <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+
+                    <h3>Fone de ouvido TWS</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+                    <h3>Garrafinha com base</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+                    <h3>Power Bank 5000mAh</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+
+                    <h3>Fone de ouvido TWS</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+                    <h3>Garrafinha com base</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+                    <h3>Power Bank 5000mAh</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+
+                    <h3>Fone de ouvido TWS</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+                    <h3>Garrafinha com base</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+                    <h3>Power Bank 5000mAh</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+
+                    <h3>Fone de ouvido TWS</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+                    <h3>Garrafinha com base</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+                    <h3>Power Bank 5000mAh</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
+
+                    <h3>Fone de ouvido TWS</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Fone de ouvido TWS">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="">
+
+                    <h3>Garrafinha com base</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Garrafinha com base">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp" alt="">
+
+                    <h3>Power Bank 5000mAh</h3>
+
+                    <span>R$0,00</span>
+
+                    <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
+                </div>
+
             </div>
 
         </section>
 
     </main>
 
+    <!-- <footer>
+
+        <h1>BolvierTeam</h1>
+
+    </footer> -->
+
     <script src="js/compras.js"></script>
+    <script src="js/links.js"></script>
 
 </body>
 
