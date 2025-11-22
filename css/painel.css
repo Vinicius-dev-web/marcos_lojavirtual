@@ -284,6 +284,31 @@ main {
 
         }
 
+        .cards-prod {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 12px;
+            border: 1px solid var(--cor-borda1);
+
+            padding: 10px;
+            max-width: 200px;
+
+            img {
+                width: 200px;
+                max-width: 200px;
+
+                /* border: 1px solid var(--cor-borda1); */
+                /* border-radius: 12px; */
+            }
+
+            h2,
+            span {
+                margin: 10px 0px;
+            }
+        }
 
     }
 
