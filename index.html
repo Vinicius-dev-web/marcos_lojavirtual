@@ -36,6 +36,56 @@
         </div>
     </nav>
 
+    <aside class="esquerda" id="esquerda">
+
+        <div class="menu-left">
+
+            <div class="info-client">
+
+                <img src="" alt="sem foto">
+
+                <h2>Nome</h2>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    <i class="bi bi-house"></i>
+                    <span>PAGINA INICIAL</span>
+                </li>
+                <li>
+                    <i class="bi bi-columns-gap"></i>
+                    <span>TODOS OS PRODUTOS</span>
+                </li>
+                <li>
+                    <details>
+
+                        <summary>
+
+                            <i class="bi bi-funnel"></i>
+                            <span>FILTRAR</span>
+
+                        </summary>
+
+                        <div class="list-deitails">
+                            <span>Camisas</span>
+                            <span>Perfumes</span>
+                            <span>Outros</span>
+
+                        </div>
+
+                    </details>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- <button>Sair</button> -->
+
+    </aside>
+
     <!-- ----------- CARRINHO ----------- -->
 
     <div id="carrinho">
@@ -48,12 +98,16 @@
         <button class="btn-finalizar" id="btnFinalizar">Finalizar Pedido</button>
     </div>
 
+    <header>
+        <img src="https://files.tecnoblog.net/wp-content/uploads/2025/06/Capa-TBR-Eletronicos-de-Consumo-1060x596.png" alt="Sem foto">
+    </header>
+
     <main class="page" id="page">
 
 
         <!-- ----------- Produtos ----------- -->
 
-        <div class="produtos">
+        <section class="produtos" id="produtos">
 
             <div class="card">
                 <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="">
@@ -73,7 +127,8 @@
                 <button class="btn-comprar" data-produto="Power Bank 5000mAh">Adicionar ao Carrinho</button>
             </div>
 
-        </div>
+        </section>
+
     </main>
 
     <script src="js/compras.js"></script>
