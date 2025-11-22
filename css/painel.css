@@ -1,6 +1,6 @@
 body {
     background-color: var(--cor-fundo3);
-
+    overflow-x: hidden;
 }
 
 .page section {
@@ -486,6 +486,32 @@ main {
 
                     &:hover {
                         background-color: var(--cor-fundo1);
+                    }
+                }
+
+                .checkboxes {
+
+                    display: flex;
+                    border: 1px solid var(--cor-borda2);
+                    width: 100%;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        li{
+                            display: flex;
+                            justify-content: space-between;
+
+                            padding: 10px;
+
+                            input[type="checkbox"]{
+                                position: absolute;
+                                left: 350px;
+                                /* width: 100px; */
+                            }
+                        }
                     }
                 }
             }
