@@ -148,11 +148,13 @@ nav {
     /* flex-direction: column; */
 
     width: calc(100% - 250px);
-    /* 
+
+
     position: fixed;
     left: 0;
     top: 0;
-    right: 0; */
+    right: 0;
+    z-index: 1;
 
     padding: 20px;
 
@@ -196,7 +198,7 @@ nav {
 }
 
 main {
-    margin: 5rem 25rem;
+    margin: 10rem 25rem 5rem 25rem;
     color: var(--cor-branco);
 
 
@@ -494,6 +496,7 @@ main {
                     display: flex;
                     border: 1px solid var(--cor-borda2);
                     width: 100%;
+                    border-radius: 5px;
 
                     ul {
                         display: flex;
