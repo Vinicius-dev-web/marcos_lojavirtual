@@ -1,3 +1,8 @@
+
+.edit-produto-table.abrir{
+    display: flex;
+}
+
 .edit-produto-table {
     display: none;
     justify-content: center;
@@ -15,52 +20,60 @@
         bottom: 0;
         z-index: 999;
 
+
         backdrop-filter: blur(10px);
 
-        form {
+        .form {
 
+            background-color: var(--cor-borda1);
+            border-radius: 12px;
             padding: 10px;
-            border: 1px solid #ccc;
+            /* border: 1px solid #ccc; */
             width: 400px;
-        }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0px;
-
-            background-color: var(--cor-fundo3);
-            border-radius: 5px;
-            border: 1px solid var(--cor-borda1);
-            outline: none;
-
-            &:hover {
-                border: 1px solid var(--cor-borda2);
-            }
-
-            &:focus {
-                border: 1px solid var(--cor-borda2);
-            }
-        }
-
-        .btn-edit-table {
-
-            display: flex;
-            width: 100%;
-
-            button {
+            input {
                 width: 100%;
                 padding: 10px;
+                margin: 5px 0px;
 
+                border-radius: 5px;
                 border: 1px solid var(--cor-borda1);
 
-                background-color: var(--cor-fundo3);
                 color: var(--cor-branco);
+                background-color: var(--cor-fundo3);
+                outline: none;
 
-                &:hover{
-                    background-color: var(--cor-terciárias);
+                &:hover {
+                    border: 1px solid var(--cor-borda2);
+                }
+
+                &:focus {
+                    border: 1px solid var(--cor-borda2);
+                }
+            }
+
+            .btn-edit-table {
+
+                display: flex;
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    padding: 10px;
+
+                    cursor: pointer;
+
+                    border: 1px solid var(--cor-borda1);
+
+                    background-color: var(--cor-fundo3);
+                    color: var(--cor-branco);
+
+                    &:hover {
+                        background-color: var(--cor-terciárias);
+                    }
                 }
             }
         }
+
     }
 }
