@@ -240,6 +240,11 @@ main {
                     padding: 16px 18px;
                     font-size: 15px;
                     border-bottom: 1px solid #ffffff15;
+
+                    img {
+                        width: 80px;
+                        max-width: 100px;
+                    }
                 }
 
                 /* Hover da linha */
@@ -286,20 +291,21 @@ main {
 
         .cards-prod {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            /* justify-content: center; */
+            justify-content: space-between;
             align-items: center;
 
             border-radius: 12px;
-            /* border: 1px solid var(--cor-borda1); */
-            background-color: var(--cor-borda1);
+            border: 1px solid var(--cor-borda1);
+            background-color: var(--cor-fundo4);
+
 
             padding: 10px;
-            max-width: 200px;
+            max-width: 400px;
 
             img {
-                width: 200px;
-                max-width: 200px;
+                width: 80px;
+                max-width: 100px;
 
                 /* border: 1px solid var(--cor-borda1); */
                 /* border-radius: 12px; */

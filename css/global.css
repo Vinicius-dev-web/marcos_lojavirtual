@@ -7,31 +7,31 @@
 }
 
 :root {
+ 
+    --cor-primaria: #1D2123;     /**/
+    --cor-secundaria: #1A1E1F;   /**/
+    --cor-terciárias: #6C63FF;   /**/
+    --cor-quaternárias: #00FF6F; /**/
 
-    --cor-primaria: #1D2123;
-    --cor-secundaria: #1A1E1F;
-    --cor-terciárias: #6C63FF;
-    --cor-quaternárias: #00FF6F;
+    --cor-fundo1: #1448E6; /**/
+    --cor-fundo2: #3478F7; /**/
+    --cor-fundo3: #020618; /*Fundo principal*/
+    --cor-fundo4: #0F172B; /*Fundo do painel*/
+    --cor-fundo5: #1D293D; /**/
+    --cor-fundo6: #164EE9; /**/
 
-    --cor-fundo1: #1448E6;
-    --cor-fundo2: #3478F7;
-    --cor-fundo3: #020618;
-    --cor-fundo4: #0F172B;
-    --cor-fundo5: #1D293D;
-    --cor-fundo6: #164EE9;
+    --cor-branco: #FFFFFF;          /*Branco mesmo*/
+    --cor-vermelho: #E7000B;        /*Sair*/
+    --cor-vermelho-escuro: #C10007; /*Sair com hover*/
+    --cor-laranja: #FF8904;         /*Cor da núvem*/
 
-    --cor-branco: #FFFFFF;
-    --cor-vermelho: #E7000B;
-    --cor-vermelho-escuro: #C10007;
-    --cor-laranja: #FF8904;
+    --cor-alternativo: #E8F0FE; /**/
 
-    --cor-alternativo: #E8F0FE;
+    --cor-btn1: #25d366; /*Botão com hover*/
+    --cor-btn2: #5F58D9; /*Botão normal*/
+    --cor-btn3: #1D293D; /**/
 
-    --cor-btn1: #25d366;
-    --cor-btn2: #5F58D9;
-    --cor-btn3: #1D293D;
-
-    --cor-borda1: #1D293D;
-    --cor-borda2: #337AFB;
+    --cor-borda1: #1D293D; /*Bordas principais*/
+    --cor-borda2: #337AFB; /*Bordas secundárias*/
 
 }
