@@ -46,6 +46,10 @@
                     <i class="bi bi-building"></i>
                     <span>EMPRESA</span>
                 </li>
+                <li data-target="loja" onclick="loja()">
+                    <i class="bi bi-basket3"></i>
+                    <span>Loja</span>
+                </li>
             </ul>
 
 
@@ -72,7 +76,12 @@
         <div class="info-now-up">
 
             <span id="dataAtual"></span>
-            <i class="bi bi-cloud"></i>
+            <!-- <i class="bi bi-cloud"></i> -->
+
+            <button onclick="toggleTheme()" class="toggle-theme-btn">
+                <!-- <span>Tema</span> -->
+                <i id="themeIcon" class="bi bi-brightness-high"></i>
+            </button>
 
         </div>
 
@@ -231,7 +240,7 @@
 
                     <input type="text" name="" id="date-user" placeholder="Data de nascimento (opcional)">
 
-                    <div class="checkboxes">
+                    <!-- <div class="checkboxes">
 
                         <ul>
                             <li>
@@ -247,7 +256,7 @@
                                 <input type="checkbox">
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <button class="submit" id="submit">Criar</button>
 
@@ -277,16 +286,24 @@
 
                     <!-- <input type="text" name="" id="date-user" placeholder="Data de nascimento (opcional)"> -->
 
-                    <button onclick="toggleTheme()" class="toggle-theme-btn">
-                        <span>Tema</span>
-                        <i id="themeIcon" class="bi bi-brightness-high"></i>
-                    </button>
-
                     <button class="submit" id="submit">Salvar</button>
 
                 </form>
             </div>
 
+        </section>
+
+        <section class="loja" id="loja">
+
+            <div class="msg" id="msg">
+
+                <h1>Você está acessando a loja</h1>
+
+                <span>Verifique se outra aba está aberta no seu navegador. Caso não esteja, considere como um erro no sistema ou recursos adicionais que estão sendo enviados ao servidor.</span>
+
+                <img src="https://png.pngtree.com/png-clipart/20190120/ourmid/pngtree-go-to-bed-sleeping-pig-piggy-pig-sleeping-png-image_493040.png" alt="error">
+
+            </div>
         </section>
 
     </main>
@@ -301,6 +318,8 @@
 
                 <input type="text" name="" id="" placeholder="Nome do produto">
                 <input type="text" name="" id="" placeholder="Preço do produto">
+
+                <button>Excluir</button>
 
                 <div class="btn-edit-table">
 
@@ -325,6 +344,16 @@
 <script src="js/painel.js"></script>
 <script src="js/datas.js"></script>
 <script src="js/editTable.js"></script>
+<!-- <script src="js/links.js"></script> -->
+
+<script>
+    function loja(){
+
+        // location.href = "index.html"
+        
+        window.open('index.html', '_blank')
+    }
+</script>
 
 <script>
     function updateIcon(theme) {

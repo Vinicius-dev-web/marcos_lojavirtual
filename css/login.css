@@ -1,6 +1,10 @@
 body {
     /* background-color: var(--cor-fundo1); */
-    background: linear-gradient(to right, #155CFB, #193DBC);
+
+     background: var(--cor-loja);
+
+    /* background: linear-gradient(135deg, #0f1b2d 0%, #1f385f 40%, #3a5bd5 100%); */
+
 }
 
 .form {
@@ -23,7 +27,7 @@ body {
 
         span {
             text-align: center;
-            color: var(--cor-branco);
+            color: var(--cor-texto1);
 
             font-size: 50px;
 
@@ -44,7 +48,7 @@ body {
 
             border-radius: 8px;
 
-            color: var(--cor-branco);
+            color: var(--cor-texto1);
 
             background: linear-gradient(to right, #1553F2, #164EE9);
 
@@ -71,7 +75,7 @@ body {
                 padding: 17px;
                 font-size: 15px;
 
-                color: var(--cor-branco);
+                color: var(--cor-texto1);
 
                 background: transparent;
                 border: none;
@@ -96,7 +100,7 @@ body {
 
 
         button {
-            background-color: var(--cor-branco);
+            background-color: var(--cor-texto1);
 
             width: 450px;
             padding: 17px;
@@ -141,7 +145,7 @@ body {
 
             h1 {
                 text-align: center;
-                color: var(--cor-branco);
+                color: var(--cor-texto1);
 
                 font-size: 50px;
 
@@ -158,7 +162,7 @@ body {
 
                 border-radius: 8px;
 
-                color: var(--cor-branco);
+                color: var(--cor-texto1);
                 background-color: var(--cor-fundo1);
                 border: 2px solid var(--cor-fundo2);
 
@@ -170,7 +174,7 @@ body {
             }
 
             button {
-                background-color: var(--cor-branco);
+                background-color: var(--cor-texto1);
 
                 width: 350px;
                 padding: 17px;

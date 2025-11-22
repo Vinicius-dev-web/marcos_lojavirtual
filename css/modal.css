@@ -39,7 +39,7 @@
                 border-radius: 5px;
                 border: 1px solid var(--cor-borda1);
 
-                color: var(--cor-branco);
+                color: var(--cor-texto1);
                 background-color: var(--cor-fundo3);
                 outline: none;
 
@@ -66,10 +66,11 @@
                     border: 1px solid var(--cor-borda1);
 
                     background-color: var(--cor-fundo3);
-                    color: var(--cor-branco);
+                    color: var(--cor-texto1);
 
                     &:hover {
                         background-color: var(--cor-terciárias);
+                        color: var(--cor-texto1);
                     }
                 }
             }

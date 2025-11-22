@@ -16,9 +16,10 @@ body {
     /* padding: 10px; */
     border: none;
     border-radius: 12px;
-    background: var(--cor-borda1);
+    /* background: var(--cor-borda1); */
+    background-color: transparent;
     cursor: pointer;
-    color: var(--cor-branco);
+    color: var(--cor-texto1);
     font-size: 20px;
 
     display: flex;
@@ -27,7 +28,34 @@ body {
 }
 
 .toggle-theme-btn:hover {
-    background: var(--cor-borda2);
+
+    /* background: var(--cor-borda2); */
+    i {
+        color: var(--cor-laranja2);
+    }
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+
+    form {
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 70%;
+
+        label {
+            width: 100%;
+
+            border-radius: 12px;
+            border: 1px dashed var(--cor-borda2);
+            color: var(--cor-borda2);
+
+            cursor: pointer;
+        }
+
+    }
 }
 
 .painel {
@@ -50,7 +78,7 @@ body {
 
     height: 100vh;
 
-    color: var(--cor-branco);
+    color: var(--cor-texto1);
     background-color: var(--cor-fundo4);
     border-right: 1px solid var(--cor-borda1);
 
@@ -117,7 +145,7 @@ body {
         border-radius: 10px;
 
         font-size: 15px;
-        color: var(--cor-branco);
+        color: var(--cor-texto1);
         background-color: var(--cor-vermelho);
 
         cursor: pointer;
@@ -158,7 +186,7 @@ nav {
 
     padding: 20px;
 
-    color: var(--cor-branco);
+    color: var(--cor-texto1);
 
     margin-left: 250px;
 
@@ -194,13 +222,16 @@ nav {
     .adm-info-up {
         display: flex;
         flex-direction: column;
+
+        span{
+            color: var(--cor-borda2);
+        }
     }
 }
 
 main {
     margin: 10rem 25rem 5rem 25rem;
-    color: var(--cor-branco);
-
+    color: var(--cor-texto1);
 
     .produtos {
 
@@ -244,7 +275,7 @@ main {
             width: 100%;
             /* max-width: 900px; */
             margin: 40px 0;
-            background: #ffffff10;
+            background: var(--cor-tabela2);
             /* padding: 20px; */
             border-radius: 20px;
             backdrop-filter: blur(20px);
@@ -256,11 +287,11 @@ main {
                 border-collapse: separate;
                 border-spacing: 0;
                 font-family: "Inter", sans-serif;
-                color: #fff;
+                color: var(--cor-texto1);
 
                 /* Cabeçalho */
                 thead th {
-                    background: #ffffff15;
+                    background-color: var(--cor-tabela1);
                     padding: 14px 18px;
                     font-size: 14px;
                     font-weight: 600;
@@ -367,12 +398,6 @@ main {
                     padding: 80px;
                     margin-bottom: 30px;
 
-                    border-radius: 12px;
-                    border: 1px dashed var(--cor-borda2);
-                    color: var(--cor-borda2);
-
-                    cursor: pointer;
-
                     i {
                         font-size: 100px;
                     }
@@ -390,7 +415,7 @@ main {
                     padding: 20px;
                     margin: 5px 0px;
 
-                    color: var(--cor-branco);
+                    color: var(--cor-texto1);
                     background-color: var(--cor-fundo3);
 
                     border: 1px solid var(--cor-borda2);
@@ -440,14 +465,6 @@ main {
                     padding: 80px;
                     margin-bottom: 30px;
 
-                    width: 100%;
-
-                    border-radius: 12px;
-                    border: 1px dashed var(--cor-borda2);
-                    color: var(--cor-borda2);
-
-                    cursor: pointer;
-
                     i {
                         font-size: 100px;
                     }
@@ -465,7 +482,7 @@ main {
                     padding: 20px;
                     margin: 5px 0px;
 
-                    color: var(--cor-branco);
+                    color: var(--cor-texto1);
                     background-color: var(--cor-fundo3);
 
                     border: 1px solid var(--cor-borda2);
@@ -503,16 +520,18 @@ main {
                         flex-direction: column;
                         width: 100%;
 
-                        li{
+                        li {
                             display: flex;
                             justify-content: space-between;
 
-                            padding: 10px;
+                            padding: 20px;
 
-                            input[type="checkbox"]{
-                                position: absolute;
-                                left: 350px;
-                                /* width: 100px; */
+                            input[type="checkbox"] {
+                                /* position: absolute; */
+                                /* left: 350px; */
+                                width: 20px;
+                                padding: 0px;
+                                margin: 0px;
                             }
                         }
                     }
@@ -541,14 +560,6 @@ main {
                     padding: 80px;
                     margin-bottom: 30px;
 
-                    width: 100%;
-
-                    border-radius: 12px;
-                    border: 1px dashed var(--cor-borda2);
-                    color: var(--cor-borda2);
-
-                    cursor: pointer;
-
                     i {
                         font-size: 100px;
                     }
@@ -566,7 +577,7 @@ main {
                     padding: 20px;
                     margin: 5px 0px;
 
-                    color: var(--cor-branco);
+                    color: var(--cor-texto1);
                     background-color: var(--cor-fundo3);
 
                     border: 1px solid var(--cor-borda2);
@@ -594,6 +605,24 @@ main {
             }
         }
     }
+
+    .loja {
+
+        .msg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width: 50%;
+                margin: 20px 0px;
+                color: var(--cor-terciárias);
+            }
+        }
+    }
+
+
 
 
     /* Modais */
