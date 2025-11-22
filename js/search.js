@@ -1,16 +1,32 @@
-const searchInput = document.getElementById("search");
+async function carregarProdutos() {
+    const container = document.getElementById("cards-prods");
+    container.innerHTML = "<p>Carregando produtos...</p>";
 
-searchInput.addEventListener("input", function () {
-    const texto = this.value.toLowerCase().trim();
-    const cards = document.querySelectorAll(".cards-prods .card");
+    try {
+        const resposta = await fetch("listar_produtos.php");
+        const produtos = await resposta.json();
 
-    cards.forEach(card => {
-        const nomeProduto = card.querySelector("h3").textContent.toLowerCase();
+        container.innerHTML = "";
 
-        if (nomeProduto.includes(texto)) {
-            card.style.display = "flex"; // exibe
-        } else {
-            card.style.display = "none"; // esconde
-        }
-    });
-});
+        produtos.forEach(produto => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            card.innerHTML = `
+                <img src="${produto.imagem}" alt="${produto.nome}">
+                <h3>${produto.nome}</h3>
+                <span>R$ ${produto.preco}</span>
+                <button class="btn-comprar" data-produto="${produto.nome}">
+                    Adicionar ao Carrinho
+                </button>
+            `;
+
+            container.appendChild(card);
+        });
+
+    } catch (erro) {
+        container.innerHTML = "<p>Erro ao carregar produtos.</p>";
+    }
+}
+
+carregarProdutos();

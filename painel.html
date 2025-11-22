@@ -194,26 +194,28 @@
 
             <div class="form-div" id="file-create">
 
-                <form action="">
+                <form action="cadastrar_produto.php" method="POST" enctype="multipart/form-data">
 
-                    <label for="file-create">
+                    <label for="file">
 
                         <i class="bi bi-image"></i>
                         <span>Adicione uma imagem</span>
 
-                        <input type="file" name="" id="file" hidden required>
+                        <input type="file" name="imagem" id="file" hidden required>
 
                     </label>
 
-                    <input type="text" name="" id="nome-do-produto" placeholder="Nome do produto" required>
+                    <input type="text" name="nome" id="nome-do-produto" placeholder="Nome do produto" required>
 
-                    <input type="text" name="" id="preco-do-produto" placeholder="Valor do produto" required>
+                    <input type="number" name="preco" id="preco-do-produto" placeholder="Valor do produto" step="0.01"
+                        required>
 
-                    <button class="submit" id="submit">Criar</button>
+                    <button type="submit" class="submit" id="submit">Criar</button>
 
                 </form>
             </div>
         </section>
+
 
         <section class="users" id="users">
 
@@ -299,9 +301,11 @@
 
                 <h1>Você está acessando a loja...</h1>
 
-                <span>Verifique se outra aba está aberta no seu navegador. Caso não esteja, considere como um erro no sistema ou recursos adicionais que estão sendo enviados ao servidor.</span>
+                <span>Verifique se outra aba está aberta no seu navegador. Caso não esteja, considere como um erro no
+                    sistema ou recursos adicionais que estão sendo enviados ao servidor.</span>
 
-                <img src="https://png.pngtree.com/png-clipart/20190120/ourmid/pngtree-go-to-bed-sleeping-pig-piggy-pig-sleeping-png-image_493040.png" alt="error">
+                <img src="https://png.pngtree.com/png-clipart/20190120/ourmid/pngtree-go-to-bed-sleeping-pig-piggy-pig-sleeping-png-image_493040.png"
+                    alt="error">
 
             </div>
         </section>
@@ -347,10 +351,10 @@
 <!-- <script src="js/links.js"></script> -->
 
 <script>
-    function loja(){
+    function loja() {
 
         // location.href = "index.html"
-        
+
         window.open('https://marcos-loja.vercel.app/', '_blank')
     }
 </script>
