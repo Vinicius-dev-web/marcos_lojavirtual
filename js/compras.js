@@ -2,8 +2,12 @@ const numeroWhatsApp = "988671941";
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
+const iconeMenuMobile = document.getElementById("abrirMenuMobile");
+const painelMenuMobile = document.getElementById("esquerda");
+
 const iconeCarrinho = document.getElementById("abrirCarrinho");
 const painelCarrinho = document.getElementById("carrinho");
+
 const listaCarrinho = document.getElementById("lista-carrinho");
 const btnFinalizar = document.getElementById("btnFinalizar");
 
@@ -11,6 +15,12 @@ const btnFinalizar = document.getElementById("btnFinalizar");
 iconeCarrinho.addEventListener("click", () => {
     painelCarrinho.classList.toggle("aberto");
     renderizarCarrinho();
+});
+
+// Abrir e fechar menu-mobile
+iconeMenuMobile.addEventListener("click", () => {
+    painelMenuMobile.classList.toggle("abrir");
+    
 });
 
 // Botões de adicionar
@@ -85,6 +95,11 @@ btnFinalizar.addEventListener("click", () => {
 // Botão para fechar o carrinho
 document.getElementById("fecharCarrinho").addEventListener("click", () => {
     painelCarrinho.classList.remove("aberto");
+});
+
+// Botão para fechar o menuMobile
+document.getElementById("fecharMenuMobile").addEventListener("click", () => {
+    painelMenuMobile.classList.remove("abrir");
 });
 
 // Contador + animação
