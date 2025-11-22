@@ -532,7 +532,7 @@ footer {
         left: 0;
         z-index: 1;
 
-        padding: 20px 30px 30px 30px;
+        padding: 10px 30px 10px 30px;
 
         /* backdrop-filter: blur(20px); */
         /* background-color: var(--cor-loja3); */
@@ -913,7 +913,7 @@ footer {
 
     main {
 
-        margin: 10rem 2rem;
+        margin: 6rem 2rem;
         padding-bottom: 100px;
 
         /* .home{} */
