@@ -208,10 +208,10 @@ main {
 
         .tabela-container {
             width: 100%;
-            max-width: 900px;
+            /* max-width: 900px; */
             margin: 40px 0;
             background: #ffffff10;
-            padding: 20px;
+            /* padding: 20px; */
             border-radius: 20px;
             backdrop-filter: blur(20px);
             border: 1px solid #ffffff22;
@@ -247,6 +247,17 @@ main {
                     }
                 }
 
+                #editar-table {
+                    i {
+                        cursor: pointer;
+                        font-size: 20px;
+
+                        &:hover{
+                            color: var(--cor-borda2);
+                        }
+                    }
+                }
+
                 /* Hover da linha */
                 tbody tr:hover {
                     background: #ffffff07;
@@ -254,37 +265,21 @@ main {
 
                 /* Primeira e última linha com cantos arredondados */
                 thead tr:first-child th:first-child {
-                    border-top-left-radius: 12px;
+                    border-top-left-radius: 20px;
                 }
 
                 thead tr:first-child th:last-child {
-                    border-top-right-radius: 12px;
+                    border-top-right-radius: 20px;
                 }
 
                 tbody tr:last-child td:first-child {
-                    border-bottom-left-radius: 12px;
+                    border-bottom-left-radius: 20px;
                 }
 
                 tbody tr:last-child td:last-child {
-                    border-bottom-right-radius: 12px;
+                    border-bottom-right-radius: 20px;
                 }
 
-                .status {
-                    padding: 6px 14px;
-                    border-radius: 12px;
-                    font-size: 13px;
-                    font-weight: 600;
-
-                    &.ativo {
-                        background: #4ade8050;
-                        color: #4ade80;
-                    }
-
-                    &.inativo {
-                        background: #f8717150;
-                        color: #f87171;
-                    }
-                }
             }
 
         }
@@ -350,7 +345,7 @@ main {
 
                     &:hover {
                         /* background-color: var(--cor-borda1); */
-                        border: 1px dashed var(--cor-quaternárias);
+                        border: 1px solid var(--cor-borda2);
                     }
                 }
 
@@ -370,17 +365,22 @@ main {
                     outline: none;
 
                     &:hover {
-                        border: 1px solid var(--cor-quaternárias);
+                        border: 1px solid var(--cor-fundo6);
                     }
 
                     &:focus {
-                        border: 1px solid var(--cor-quaternárias);
+                        border: 1px solid var(--cor-fundo6);
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     }
                 }
 
                 button {
                     cursor: pointer;
+
+                    &:hover{
+
+                        background-color: var(--cor-fundo1);
+                    }
                 }
             }
         }
@@ -420,7 +420,7 @@ main {
 
                     &:hover {
                         /* background-color: var(--cor-borda1); */
-                        border: 1px dashed var(--cor-quaternárias);
+                        border: 1px solid var(--cor-borda2);
                     }
                 }
 
@@ -440,20 +440,30 @@ main {
                     outline: none;
 
                     &:hover {
-                        border: 1px solid var(--cor-quaternárias);
+                        border: 1px solid var(--cor-fundo6);
                     }
 
                     &:focus {
-                        border: 1px solid var(--cor-quaternárias);
+                        border: 1px solid var(--cor-fundo6);
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     }
                 }
 
                 button {
                     cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--cor-fundo1);
+                    }
                 }
             }
         }
     }
 
+
+    /* Modais */
+
+    /* Editar produto */
+
+    /* .edit-produto-table{} */
 }

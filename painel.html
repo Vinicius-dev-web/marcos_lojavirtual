@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/modal.css">
 
     <title>Painel de controle - Administativo</title>
 
@@ -103,7 +104,9 @@
                             <th>Foto</th>
                             <th>Produto</th>
                             <th>Preço</th>
-
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Editar</th>
                         </tr>
                     </thead>
 
@@ -119,17 +122,11 @@
 
                             <td id="preco-do-produto-table">R$ 0,00</td>
 
-                        </tr>
-                        
-                        <tr>
+                            <td id="data-do-produto-table">21/11/2025</td>
 
-                            <td id="imagem-do-produto-table">
-                                <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="sem foto">
-                            </td>
+                            <td id="hora-do-produto-table">21:55</td>
 
-                            <td id="nome-do-produto-table">GARRAFINHA-C-SILICONE-BRANCO</td>
-
-                            <td id="preco-do-produto-table">R$ 0,00</td>
+                            <td id="editar-table"><i class="bi bi-pencil-square"></i></td>
 
                         </tr>
 
@@ -180,8 +177,8 @@
 
                     <label for="file" id="file-user">
 
-                        <i class="bi bi-image"></i>
-                        <span>Adicione uma imagem</span>
+                        <i class="bi bi-person-bounding-box"></i>
+                        <span>Adicione um perfil</span>
 
                         <input type="file" name="" id="file" hidden>
 
@@ -203,6 +200,27 @@
 
     </main>
 
+    <!-- Editar produto -->
+
+    <div class="edit-produto-table" id="edit-produto-table">
+
+        <div class="edit-table">
+
+            <form action="">
+
+                <input type="text" name="" id="" placeholder="Nome do produto">
+                <input type="text" name="" id="" placeholder="Preço do produto">
+
+                <div class="btn-edit-table">
+
+                    <button>Salvar</button>
+                    <button>Cancelar</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div> 
 
 </body>
 
