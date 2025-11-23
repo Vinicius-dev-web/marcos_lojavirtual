@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="css/carrosel.css">
 
     <title>Marcos Coutinho - A loja virtual</title>
 </head>
@@ -100,9 +101,25 @@
 
         <!-- Produtos -->
         <section class="produtos" id="produtos">
-            <header>
-                <img src="https://files.tecnoblog.net/wp-content/uploads/2025/06/Capa-TBR-Eletronicos-de-Consumo-1060x596.png"
+
+            <header class="carrossel-container">
+
+                <div class="carrossel-track">
+                    <img src="https://files.tecnoblog.net/wp-content/uploads/2025/06/Capa-TBR-Eletronicos-de-Consumo-1060x596.png"
                     alt="Sem foto">
+
+                    <img src="https://img.freepik.com/vetores-gratis/projeto-de-modelo-de-loja-de-eletronicos_23-2151143835.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+                    <img src="https://img.freepik.com/psd-gratuitas/modelo-de-design-de-capa-de-midia-social-da-venda-da-sexta-feira-negra_47987-25244.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+                    <img src="https://img.freepik.com/vetores-gratis/cabecalho-do-twitter-da-loja-de-eletronicos_23-2151173093.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+                    <img src="https://img.freepik.com/psd-gratuitas/modelo-de-banner-de-capa-do-facebook-da-super-venda-da-sexta-feira-negra_106176-5848.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+                    <img src="https://img.pikbest.com/origin/10/04/43/30YpIkbEsTIcR.jpg!w700wp" alt="">
+
+                </div>
+
             </header>
 
             <script async
@@ -130,5 +147,24 @@
 
     <!-- JS Carrinho -->
     <script src="js/compras.js"></script>
+
+    <!-- carrossel -->
+    <script>
+
+        const track = document.querySelector('.carrossel-track');
+        const slides = Array.from(track.children);
+        let index = 0;
+
+        function slideShow() {
+            index++;
+            if (index >= slides.length) index = 0;
+            track.style.transform = `translateX(-${index * 100}%)`; // 100% da largura do container
+        }
+
+        // Troca a cada 3 segundos
+        setInterval(slideShow, 3000);
+
+    </script>
 </body>
+
 </html>
