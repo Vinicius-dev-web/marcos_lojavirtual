@@ -956,6 +956,7 @@ footer {
 
                 display: flex;
                 justify-content: center;
+                align-items: center;
 
                 img {
                     width: 100%;
@@ -985,6 +986,7 @@ footer {
             .lista-produtos {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
 
                 gap: 12px;
 
