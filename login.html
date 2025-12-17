@@ -12,63 +12,49 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/login.css">
 
     <title>Entrar</title>
+</head>
 
 <body>
     <div class="form">
 
-        <form action="">
+        <!-- Formulário de Login -->
+        <form method="POST" action="#">
+            <span>Entrar</span>
 
-            <span>MarcosTech</span>
-
-            <label for="user">
-
+            <label for="email" class="nomeLabel">
                 <i class="bi bi-person"></i>
-
-                <input type="text" name="" id="user" placeholder="Usuário">
-
+                <input type="email" name="email" id="email" placeholder="Email" required>
             </label>
 
-            <label for="senha">
-
+            <label for="senha" class="emailLabel">
                 <i class="bi bi-key"></i>
-
-                <input type="password" name="" id="senha" placeholder="Senha">
-
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
             </label>
 
+            <button type="submit"><b>ENTRAR</b></button>
 
-            <button type="submit" onclick="login(); return false"><b>ENTRAR</b></button>
+            <!-- <button type="button" onclick="window.location.href='cadastro.php'"><b>CRIAR CONTA</b></button> -->
 
-            <!-- <button><b>ESQUECI MINHA SENHA</b></button> -->
+            <button type="button" onclick="window.location.href='recuperar.html'"><b>ESQUECI A SENHA</b></button>
 
-            <div id="error" style="color: var(--cor-vermelho);"><b></b></div>
+
+            <!-- <div id="error" style="color: var(--cor-vermelho);">
+                senha incorreta
+            </div> -->
+
+            <!-- Mostra mensagem de cadastro -->
+            <!-- <div id="cadastro-msg" style="color: green; margin-top: 10px;">
+                Loja criada com sucesso!<br>
+            </div> -->
+
 
         </form>
+
     </div>
-
-    <script>
-
-        function login() {
-
-            email = document.getElementById("user").value
-            senha = document.getElementById("senha").value
-
-            if (email == "user@net" && senha == "123") {
-
-                location.href = "painel.html"
-            }
-
-            else {
-                // error = document.getElementById("error").innerHTML = "Login inválido."
-            }
-        }
-
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@300;400;500;600;700;800&family=Zalando+Sans+SemiExpanded:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="loja.css">
+
+    <link rel="icon" href="">
+
+    <title>
+        BShop - Loja Virtual
+    </title>
+</head>
+
+<body>
+
+    <div class="push-notification" id="pushNotification">
+
+        <i class="bi bi-bag-check"></i>
+        <span>Adicionado ao carrinho</span>
+
+    </div>
+
+    <nav class="navbar">
+
+        <!-- Versão preview -->
+
+        <span class="logo" id="logo">
+            <span>Bshop</span>
+        </span>
+
+        <!-- <ul>
+            <li class="active">Página inicial</li>
+            <li>Mr2</li>
+            <li>Blinclass</li>
+            <li>Sapatos</li>
+            <li>Acessórios</li>
+        </ul> -->
+
+        <div class="icons-menu" onclick="carrinho()">
+
+            <div class="bag-area">
+                <i class="bi bi-handbag" id="abrirCarrinho"></i>
+                <span id="contadorCarrinho">0</span>
+            </div>
+
+            <div class="menu-mobile" id="abrirMenuMobile">
+                <i class="bi bi-list"></i>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main class="page" id="page">
+
+        <section class="home" id="home">
+
+            <header class="carrossel-container">
+
+                <div class="carrossel-track" id="banners-div">
+
+                    <img src="../img/banner4.png"
+                        alt="">
+
+                </div>
+
+            </header>
+
+            <div class="info-client">
+
+                <!-- Versão preview -->
+
+                <img src="../uploads/lojas/693f2f59ee750-design sem nome.png" alt="<?php echo htmlspecialchars($nome_loja) ?>" loading="lazy">
+
+                <h1>
+
+                    <!-- Versão preview -->
+
+                    BShop<br>
+                    <span id="categoria-adm" style="font-size: 15px;">
+                        Moda
+                    </span>
+
+                </h1>
+
+            </div>
+
+            <!-- ----------- Produtos ----------- -->
+
+            <div class="produtos" id="produtos">
+
+                <!-- <details class="details-produtos">
+                    <summary>
+                        <span>Todos os produtos</span>
+                        <span class="seta">▾</span>
+                    </summary>
+
+                    <ul>
+                        <li><a href="#">Camisas</a></li>
+                        <li><a href="#">Sapatos</a></li>
+                        <li><a href="#">Bolsas</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </details> -->
+
+                <h2>Todos os produtos</h2>
+
+                <div id="lista-produtos" class="lista-produtos">
+
+                <!-- Versão testes/view -->
+
+                <div id="lista-produtos" class="lista-produtos">
+                    <div class="card">
+
+                        <img src="https://img.olx.com.br/images/62/629509587540212.jpg" loading="lazy">
+
+                        <h3>Nome</h3>
+
+                        <p class="tamanho">Tamanho: PP,G,GG</p>
+
+                        <p class="preco"><b>R$ 189,90</b></p>
+
+                        <button class="btn-comprar" data-produto="' . htmlspecialchars($p['nome']) . '"
+                            data-preco="' . htmlspecialchars($p['preco']) . '"
+                            data-imagem="' . htmlspecialchars($prod_path) . '"
+                            data-tamanho="' . htmlspecialchars($tamanho) . '">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://img.olx.com.br/images/21/212524584243144.jpg" loading="lazy">
+
+                        <h3>Conjunto mr2</h3>
+
+                        <p class="tamanho">Tamanho: P,M,G</p>
+
+                        <p class="preco"><b>R$ 199,90</b></p>
+
+                        <button class="btn-comprar" data-produto="' . htmlspecialchars($p['nome']) . '"
+                            data-preco="' . htmlspecialchars($p['preco']) . '"
+                            data-imagem="' . htmlspecialchars($prod_path) . '"
+                            data-tamanho="' . htmlspecialchars($tamanho) . '">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ----------- banners -----------  -->
+
+            <div class="banners" id="banners">
+
+                <h2>Destaques</h2>
+
+                <div class="banners-div" id="banners-div">
+                    <img src="https://marketplace.canva.com/EAF0RxuySjc/1/0/800w/canva-banner-de-black-friday-formato-paisagem-org%C3%A2nico-delicado-em-lavanda-e-cinza-ard%C3%B3sia-yiGSUITHLd0.jpg"
+                        alt="banner">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="aboutme" id="aboutme"></section>
+
+        <section class="location" id="location"></section>
+
+    </main>
+
+    <div class="info-prod-modal" id="info-prod-modal" style="display: none;">
+
+        <div>
+
+            <span id="fechar">&times;</span>
+
+            <div class="info-prod">
+
+                <!-- MINIATURAS -->
+                <aside class="thumbs">
+                    <img src="" alt="">
+
+                    <img src="" alt="">
+
+                    <img src="" alt="">
+                </aside>
+
+                <!-- IMAGEM PRINCIPAL -->
+                <div class="imagem-principal">
+                    <img src="" id="imagemPrincipal" alt="">
+                </div>
+
+            </div>
+
+            <!-- Descrição -->
+            <div class="descricao">
+
+                <h2></h2>
+
+            </div>
+
+            <select name="" id="">
+                <option value="null">Escolha um tamanho</option>
+                <option value="">PP</option>
+                <option value="">P</option>
+                <option value="">M</option>
+                <option value="">G</option>
+                <option value="">GG</option>
+            </select>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+<script src="../js/compras.js"></script>
+<script src="../js/links.js"></script>
+<script src="../js/produtos.js"></script>
+<script src="../js/pegarProduto.js"></script>
+<script src="../js/modais.js"></script>
+<!-- <script src="painelloja.js"></script> -->
+
+<!-- Carrossel header -->
+<script>
+    const track = document.querySelector('.carrossel-track');
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    function slideShow() {
+        index++;
+        if (index >= slides.length) index = 0;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(slideShow, 3000);
+</script>
+
+<!-- Link para o carrinho -->
+<script>
+    function carrinho() {
+        // const slug = "<?php echo urlencode($slug); ?>";
+        window.location.href = "carrinho.html";
+    }
+</script>
+
+<!-- Notificação -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const botoesComprar = document.querySelectorAll(".btn-comprar");
+
+        botoesComprar.forEach(botao => {
+            botao.addEventListener("click", () => {
+                showPushNotification();
+            });
+        });
+
+    });
+
+    function showPushNotification() {
+        const push = document.getElementById("pushNotification");
+
+        if (!push) return;
+
+        push.classList.add("show");
+
+        setTimeout(() => {
+            push.classList.remove("show");
+        }, 2500);
+    }
+</script>
+
+<script>
+    const thumbs = document.querySelectorAll(".thumbs img");
+    const imagemPrincipal = document.getElementById("imagemPrincipal");
+
+    thumbs.forEach(img => {
+        img.addEventListener("click", () => {
+            imagemPrincipal.src = img.src;
+        });
+    });
+</script>
+
+</html>
