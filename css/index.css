@@ -1,0 +1,330 @@
+/* ===== Reset e Background ===== */
+body {
+    background-color: var(--cor-fundo9);
+
+    /* background: var(--cor-loja3); */
+    /* background-color: var(--cor-fundo); */
+    /* background: var(--cor-loja2); */
+    /* background-repeat: no-repeat;
+       background-size: cover;
+       background-attachment: fixed; */
+
+    background-image: url(../white-abstract-background/4857721.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+} */
+
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    gap: 20px;
+
+    backdrop-filter: blur(5px);
+
+    /* background-color: #46c4f3; */
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(247, 245, 245));
+
+
+    img {
+        width: 150px;
+        border-radius: 100%;
+    }
+
+    button {
+        width: 200px;
+        padding: 10px;
+
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+
+        background-color: var(--cor-fundo2);
+        color: var(--cor-texto1);
+
+    }
+}
+
+/* nav {
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    gap: 10px;
+
+    position: sticky;
+    top: 0;
+    right: 0;
+
+    padding: 20px 40px;
+    background-color: var(--cor-fundo9);
+
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(255, 255, 255));
+
+    button {
+        width: 100px;
+        padding: 5px;
+
+        border-radius: 5px;
+        border: none;
+        background-color: var(--cor-fundo2);
+        color: var(--cor-texto1);
+    }
+} */
+
+/* ===== MAIN ===== */
+main {
+    color: var(--cor-texto2);
+    background-color: var(--cor-fundo9);
+
+    h2{
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        background-color: var(--cor-fundo9);
+        padding: 20px;
+    }
+
+    section {
+        margin: 0rem 200px;
+        padding: 10rem 0px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            width: 50%;
+            word-break: break-all;
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            width: 50%;
+            word-break: break-all;
+            text-align: end;
+        }
+
+        img {
+            width: 25%;
+        }
+    }
+
+    .lojas {
+        display: flex;
+        flex-direction: column;
+
+        .lista-lojas {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            .card-loja {
+                width: 300px;
+                padding: 10px;
+                margin: 40px 0px;
+
+                display: flex;
+                align-items: center;
+
+                border-radius: 5px;
+                border: 1px solid var(--cor-borda);
+                background: var(--cor-loja4);
+                color: var(--cor-texto2);
+
+                background-color: var(--cor-card1);
+                transition: all 0.3s ease;
+
+                word-break: break-all;
+
+                img {
+                    min-width: 100px;
+                    min-height: 100px;
+                    max-width: 100px;
+                    max-height: 100px;
+
+                    margin-right: 15px;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+    /* -------- PLANOS -------- */
+
+    .planos {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .planos h1 {
+        font-size: 2.6rem;
+        margin-bottom: 40px;
+        background: linear-gradient(90deg, #6d5dfc, #46c4f3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    /* CARD BASE + GLASS EFFECT */
+    .planos .card {
+        width: 300px;
+        padding: 30px;
+        border-radius: 18px;
+
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.55),
+                rgba(255, 255, 255, 0.1));
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        text-align: left;
+        transition: .3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* EFEITO DE LUZ BORRADA ATRÁS */
+    .planos .card::before {
+        content: "";
+        position: absolute;
+        width: 180%;
+        height: 180%;
+        top: -40%;
+        left: -40%;
+        background: radial-gradient(circle at top left,
+                rgba(80, 155, 255, 0.4),
+                rgba(255, 255, 255, 0));
+        filter: blur(60px);
+        z-index: 0;
+    }
+
+    /* CONTEÚDO */
+    .planos .card * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .planos .card h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .planos .card p {
+        margin-bottom: 20px;
+        opacity: 0.85;
+    }
+
+    /* LISTA */
+    .planos .card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .planos .card ul li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .planos .card ul li::before {
+        content: "✓";
+        color: #4db8ff;
+        font-weight: bold;
+    }
+
+    /* BOTÃO */
+    .planos .card button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #6d5dfc, #46c4f3);
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .planos .card button:hover {
+        scale: 1.03;
+    }
+
+    /* CARD DESTAQUE */
+    .planos .card.destaque {
+        transform: scale(1.05);
+        border: 2px solid rgba(109, 93, 252, 0.5);
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.65),
+                rgba(255, 255, 255, 0.2));
+    }
+
+    .planos .card.destaque::before {
+        background: radial-gradient(circle at top left,
+                rgba(109, 93, 252, 0.5),
+                rgba(255, 255, 255, 0));
+    }
+
+
+}
+
+/* ===== FOOTER ===== */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    color: var(--cor-texto2);
+    padding: 20px 40px;
+    background: var(--cor-borda);
+}

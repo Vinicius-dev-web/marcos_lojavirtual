@@ -4,18 +4,23 @@
     box-sizing: border-box;
     transition: .2s;
     font-family: "Inter", sans-serif;
+    /* font-family: "Google Sans Code", monospace; */
 }
 
 :root {
 
-    --cor-primaria: #1D2123;
+    --cor-primaria: black;
+    
+    --cor-secundaria: #1D2123;
     /**/
-    --cor-secundaria: #1A1E1F;
+    /* --cor-secundaria: #1A1E1F; */
     /**/
     --cor-terciárias: #6C63FF;
     /**/
     --cor-quaternárias: #00FF6F;
     /**/
+
+    --cor-fundo: #ffffff;
 
     --cor-fundo1: #1448E6;
     /**/
@@ -29,18 +34,32 @@
     /**/
     --cor-fundo6: #164EE9;
     /**/
-    
+    --cor-fundo7: #343745;
+    /* Fundo tabela & chat */
+    --cor-fundo8: #191C2D;
+    /* Fundo tabela2 & chat hover */
+
+    --cor-fundo9: #ffffff;
+    --cor-fundo10: #EEEEF9;
+    --cor-fundo11: #f5f5f5;
+
+    --painel: linear-gradient(to right, #F8F8FC, #ECECF8);
+
     --cor-loja: linear-gradient(to right, #155CFB, #193DBC);
+
     --cor-loja2: linear-gradient(to top, #0353ff, #0b1a50);
 
-    /* --cor-loja3: #4618AC; */
-    --cor-loja3: linear-gradient(to right, #155CFB, #193DBC);
+    --cor-loja3: #4618ac;
+    /* --cor-loja3: linear-gradient(to right, #155CFB, #193DBC); */
 
-    --cor-loja4:#341281;
+    --cor-loja4: #341281;
 
     --cor-card: #123A8C;
-    --cor-borda: #9395A5;
+    --cor-card1: #ffffff;
+
+    --cor-borda: #ECECF0;
     --cor-borda2: #2069FF;
+    --cor-borda3: #341281;
 
     --cor-tabela1: #ffffff15;
     --cor-tabela2: #ffffff10;
@@ -57,6 +76,9 @@
     /*Cor da núvem*/
     --cor-laranja2: #b46102;
     /*Cor da núvem com hover*/
+    --amarelo: #FAD318;
+    /*  */
+    --amarelo2: #F0A613;
 
     --cor-alternativo: #E8F0FE;
     /**/
@@ -73,6 +95,9 @@
     --cor-borda2: #337AFB;
     /*Bordas secundárias*/
 
+    --carrinho: #303342;
+    --carrinho1: #393E50;
+    --carrinho2: #13141A;
 }
 
 /* ======================= */
@@ -88,7 +113,6 @@ html[data-theme="light"] {
     --cor-fundo6: #d8d8d8;
 
     --cor-texto1: #000;
-    /* --cor-preto: #000; */
 
     --cor-borda1: #00000010;
     --cor-borda2: #6a11cb;

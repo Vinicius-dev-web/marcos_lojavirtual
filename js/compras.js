@@ -1,94 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
+// ADICIONAR AO CARRINHO
+document.querySelectorAll(".btn-comprar").forEach(btn => {
+    btn.addEventListener("click", function () {
 
-    const numeroWhatsApp = "988671941";
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        const nome = this.dataset.produto;
+        const preco = this.dataset.preco;
+        const imagem = this.dataset.imagem;
+        const tamanho = this.dataset.tamanho;
 
-    const iconeMenuMobile = document.getElementById("abrirMenuMobile");
-    const painelMenuMobile = document.getElementById("esquerda");
+        const slug = document.body.dataset.slug;
 
-    const iconeCarrinho = document.getElementById("abrirCarrinho");
-    const painelCarrinho = document.getElementById("carrinho");
+        fetch("../php/add_carrinho.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body:
+                `nome=${encodeURIComponent(nome)}` +
+                `&preco=${encodeURIComponent(preco)}` +
+                `&imagem=${encodeURIComponent(imagem)}` +
+                `&tamanho=${encodeURIComponent(tamanho)}` +
+                `&slug=${encodeURIComponent(slug)}`
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === "ok") {
 
-    const listaCarrinho = document.getElementById("lista-carrinho");
-    const btnFinalizar = document.getElementById("btnFinalizar");
+                    // atualiza contador
+                    const contador = document.getElementById("contadorCarrinho");
+                    contador.innerText = data.total_itens;
+                    contador.classList.add("pop");
+                    setTimeout(() => contador.classList.remove("pop"), 300);
 
-    iconeCarrinho.addEventListener("click", () => {
-        painelCarrinho.classList.toggle("aberto");
-        renderizarCarrinho();
+                    // 🔔 MOSTRA A PUSH NOTIFICATION
+                    showPushNotification();
+                }
+            });
     });
 
-    iconeMenuMobile.addEventListener("click", () => {
-        painelMenuMobile.classList.toggle("abrir");
-    });
+    function showPushNotification() {
+        const push = document.getElementById("pushNotification");
 
-    document.querySelectorAll(".btn-comprar").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const produto = btn.getAttribute("data-produto");
-            carrinho.push(produto);
-            salvarCarrinho();
-            renderizarCarrinho();
-            atualizarContador();
-        });
-    });
+        if (!push) return;
 
-    function salvarCarrinho() {
-        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        push.classList.add("show");
+
+        setTimeout(() => {
+            push.classList.remove("show");
+        }, 2500);
     }
-
-    function renderizarCarrinho() {
-        listaCarrinho.innerHTML = "";
-        carrinho.forEach((produto, index) => {
-            const item = document.createElement("p");
-            item.innerHTML = `${produto} <button onclick="removerItem(${index})">X</button>`;
-            listaCarrinho.appendChild(item);
-        });
-        btnFinalizar.disabled = carrinho.length === 0;
-    }
-
-    window.removerItem = function (index) {
-        carrinho.splice(index, 1);
-        salvarCarrinho();
-        renderizarCarrinho();
-        atualizarContador();
-    }
-
-    btnFinalizar.addEventListener("click", () => {
-        if (carrinho.length === 0) {
-            alert("Carrinho vazio!");
-            return;
-        }
-
-        let mensagem = "Olá! Tenho interesse nesses produtos:\n\n";
-        carrinho.forEach(item => {
-            mensagem += `• ${item}\n`;
-        });
-        mensagem += "\nPodemos continuar o atendimento?";
-        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-        window.open(url, "_blank");
-
-        carrinho = [];
-        salvarCarrinho();
-        renderizarCarrinho();
-        atualizarContador();
-    });
-
-    document.getElementById("fecharCarrinho").addEventListener("click", () => {
-        painelCarrinho.classList.remove("aberto");
-    });
-
-    document.getElementById("fecharMenuMobile").addEventListener("click", () => {
-        painelMenuMobile.classList.remove("abrir");
-    });
-
-    function atualizarContador() {
-        const contador = document.getElementById("contadorCarrinho");
-        contador.textContent = carrinho.length;
-        contador.classList.remove("pop");
-        void contador.offsetWidth;
-        contador.classList.add("pop");
-    }
-
-    atualizarContador();
-    renderizarCarrinho();
 
 });
