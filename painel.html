@@ -13,76 +13,130 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/painel.css">
-    <link rel="stylesheet" href="css/modal.css">
 
-    <title>Painel de controle - Administativo</title>
+    <link rel="icon" href="">
+
+    <title>Painel de controle - Administrativo</title>
 
 </head>
 
 <body>
 
-    <div class="painel">
+    <aside class="painel">
 
         <div class="painel-info">
 
-            <h1>MarcosTech</h1>
+            <div class="adm-site">
+                <div class="info-adm">
+
+                    <img src="uploads/lojas/693f2f59ee750-design sem nome.png" alt="">
+
+
+                    <div>
+                        <div class="title-start-user">
+                            <h2>
+                                <span>BTeam</span>
+                            </h2>
+                        </div>
+                        <h6 id="descrição_loja">
+                            <span>Painel Administrativo</span>
+                        </h6>
+                    </div>
+                </div>
+
+            </div>
 
             <ul>
                 <li data-target="produtos">
-                    <i class="bi bi-speedometer2"></i>
-                    <span>PAINEL</span>
+                    <i class="bi bi-box-seam-fill"></i>
+                    <span>PRODUTOS</span>
                 </li>
                 <li data-target="create">
-                    <i class="bi bi-images"></i>
-                    <span>PRODUTO</span>
-                </li>
-                <li data-target="users">
-                    <i class="bi bi-people"></i>
-                    <span>USUÁRIOS</span>
+                    <i class="bi bi-plus-square-fill"></i>
+                    <span>CRIAR</span>
                 </li>
                 <li data-target="cog">
-                    <i class="bi bi-building"></i>
-                    <span>EMPRESA</span>
+                    <i class="bi bi-brush-fill"></i>
+                    <span>Aparência</span>
                 </li>
-                <li data-target="loja" onclick="loja()">
-                    <i class="bi bi-basket3"></i>
-                    <span>Loja</span>
+                <li data-target="loja" id="menuLoja">
+                    <i class="bi bi-globe"></i>
+                    <span>Minha Loja</span>
                 </li>
             </ul>
 
+        </div>
+
+        <div class="info-loja-painel">
+
+            <div class="adm-user">
+                <div class="info-adm">
+
+                    <img src="uploads/lojas/693f2f59ee750-design sem nome.png" alt="Foto da loja">
+
+                    <div>
+                        <div class="title-start-user">
+                            <h2>
+                                BShop
+                            </h2>
+                        </div>
+                        <h6 id="descrição_loja">
+                            Moda
+                        </h6>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="logout" id="logout" onclick="window.location.href='php/logout.php'">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>SAIR</span>
+            </div>
 
         </div>
 
-        <!-- <button>sair</button> -->
 
-        <div class="logout" id="logout" onclick="logout()">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>SAIR</span>
+    </aside>
+
+    <nav class="main-content" style="display: none;">
+
+        <div class="adm-user">
+            <div class="info-adm">
+
+                <img src="" alt="Foto da loja">
+
+                <div>
+                    <div class="title-start-user">
+                        <h2>
+                            Loja
+                        </h2>
+                    </div>
+                    <h6 id="descrição_loja">
+                        Moda
+                    </h6>
+                </div>
+            </div>
+
+            <!-- <button data-target="cog">Editar loja</button> -->
         </div>
 
-    </div>
-
-    <nav class="main-content">
-
-        <div class="adm-info-up">
-
-            <h2>Marcos</h2>
-            <span>Administrador</span>
-
-        </div>
+        <!-- <div class="adm-info-up">
+            <h2>Painel de controle</h2>
+            <span>Administrativo</span>
+        </div> -->
 
         <div class="info-now-up">
-
             <span id="dataAtual"></span>
-            <!-- <i class="bi bi-cloud"></i> -->
 
-            <button onclick="toggleTheme()" class="toggle-theme-btn">
-                <!-- <span>Tema</span> -->
+            <button id="toggleThemeBtn" class="toggle-theme-btn">
                 <i id="themeIcon" class="bi bi-brightness-high"></i>
             </button>
-
         </div>
 
     </nav>
@@ -91,228 +145,289 @@
 
         <section class="produtos" id="produtos">
 
-            <!-- <div class="info-pdt-cards">
-                <div class="info-card" id="estoque">
+            <h1>Produtos</h1>
 
-                    <div class="title-card">
-                        <h2>Estoque</h2>
-                        <i class="bi bi-archive"></i>
-                    </div>
+            <label for="search">
 
-                    <span class="qntd-prod" id="qntd-prod"><b>0</b></span>
+                <i class="bi bi-search"></i>
+                <input type="text" name="" id="search" placeholder="Pesquise aqui...">
 
-                </div>
-            </div> -->
+            </label>
 
             <div class="tabela-container">
-
                 <table class="tabela-estilo">
 
                     <thead>
+
                         <tr>
                             <th>Foto</th>
                             <th>Produto</th>
                             <th>Preço</th>
-                            <th>Data</th>
-                            <th>Hora</th>
+                            <th>Tipo</th>
+                            <th>Tamanho</th>
                             <th>Editar</th>
                         </tr>
                     </thead>
-
                     <tbody>
-
                         <tr>
-
-                            <td id="imagem-do-produto-table">
-                                <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="sem foto">
+                            <td><img src="uploads/produtos/69358955a04d2-11420304253jaajbg8h6.jpeg" alt="" width="60"></td>
+                            <td>nome</td>
+                            <td>R$89,90</td>
+                            <td>Roupa adulto</td>
+                            <td>PP,P,M,G,GG</td>
+                            <td>
+                                <button class="btn-editar" onclick="editarProduto()">
+                                    <span>Editar</span>
+                                </button>
                             </td>
-
-                            <td id="nome-do-produto-table">GARRAFINHA COM SILICONE BRANCO</td>
-
-                            <td id="preco-do-produto-table">R$ 0,00</td>
-
-                            <td id="data-do-produto-table">21/11/2025</td>
-
-                            <td id="hora-do-produto-table">21:55</td>
-
-                            <td id="editar-table"><i class="bi bi-pencil-square" onclick="editTable()"></i></td>
-
                         </tr>
-
-                        <tr>
-
-                            <td id="imagem-do-produto-table">
-                                <img src="img/Fone-De-Ouvido-Tws-Bluetooth_1736543662_gg.webp" alt="sem foto">
-                            </td>
-
-                            <td id="nome-do-produto-table">FONE DE OUVIDO TWS</td>
-
-                            <td id="preco-do-produto-table">R$ 0,00</td>
-
-                            <td id="data-do-produto-table">21/11/2025</td>
-
-                            <td id="hora-do-produto-table">23:12</td>
-
-                            <td id="editar-table"><i class="bi bi-pencil-square" onclick="editTable()"></i></td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td id="imagem-do-produto-table">
-                                <img src="img/carregador_power_bank_5_000mah_11082_1_2b9fd69b3ca4b56d80bcdc71271a290a.webp"
-                                    alt="sem foto">
-                            </td>
-
-                            <td id="nome-do-produto-table">CARREGADOR POWERBANK 5mAH</td>
-
-                            <td id="preco-do-produto-table">R$ 0,00</td>
-
-                            <td id="data-do-produto-table">21/11/2025</td>
-
-                            <td id="hora-do-produto-table">23:12</td>
-
-                            <td id="editar-table"><i class="bi bi-pencil-square" onclick="editTable()"></i></td>
-
-                        </tr>
-
                     </tbody>
+
                 </table>
             </div>
-
-            <!-- <div class="cards-prod">
-
-                <img src="img/GARRAFINHA-C-SILICONE-BRANCO.webp" alt="sem foto">
-
-                <h2>Produto</h2>
-                <span>R$0,00</span>
-            </div> -->
-
         </section>
 
         <section class="create" id="create">
 
+            <h1>Criar</h1>
+
             <div class="form-div" id="file-create">
 
-                <form action="cadastrar_produto.php" method="POST" enctype="multipart/form-data">
+                <form action="#" method="POST" enctype="multipart/form-data" class="form-prod">
 
-                    <label for="file">
+                    <label id="labelImagemProd">
+                        <i class="bi bi-card-image" id="iconeLabelProd"></i>
+                        <span id="textoLabelProd">Coloque uma imagem*</span>
 
-                        <i class="bi bi-image"></i>
-                        <span>Adicione uma imagem</span>
+                        <input type="file" id="inputImagem" name="imagem" accept="image/*" required hidden>
 
-                        <input type="file" name="imagem" id="file" hidden required>
-
+                        <img id="previewImagemProd">
                     </label>
 
-                    <input type="text" name="nome" id="nome-do-produto" placeholder="Nome do produto" required>
+                    <div class="values-create" id="values-create">
 
-                    <input type="number" name="preco" id="preco-do-produto" placeholder="Valor do produto" step="0.01"
-                        required>
+                        <div class="input-values-create">
 
-                    <button type="submit" class="submit" id="submit">Criar</button>
+                            <input type="text" name="nome" placeholder="Nome do produto*" maxlength="25" required>
+
+                            <input type="text" name="preco" step="0.01" placeholder="Preço do produto*" maxlength="6"
+                                required>
+
+                            <div class="select-info-outfit">
+
+                                <!-- SELECT PRINCIPAL -->
+                                <select class="choose-option" id="choose-option">
+                                    <option value="">Tipo (opcional)</option>
+                                    <option value="roupa">Roupa Adulto</option>
+                                    <option value="roupa-infantil">Roupa Infantil</option>
+                                    <option value="sapato">Sapato Adulto</option>
+                                    <option value="sapato-infantil">Sapato Infantil</option>
+                                </select>
+
+
+                                <!-- TAMANHO SAPATO -->
+                                <select class="checkBoxes" id="tam-sapato">
+                                    <option value="null">Escolha um tamanho</option>
+                                    <option value="33/34">33/34</option>
+                                    <option value="34/35">34/35</option>
+                                    <option value="35/36">35/36</option>
+                                    <option value="36/37">36/37</option>
+                                    <option value="37/38">37/38</option>
+                                    <option value="38/39">38/39</option>
+                                    <option value="39/40">39/40</option>
+                                    <option value="40/41">40/41</option>
+                                    <option value="41/42">41/42</option>
+                                    <option value="42/43">42/43</option>
+                                    <option value="43/44">43/44</option>
+                                    <option value="44/45">44/45</option>
+                                    <option value="45/46">45/46</option>
+                                    <option value="46/47">46/47</option>
+                                </select>
+
+                                <select class="checkBoxes" id="tam-sapato-infantil">
+                                    <option value="null">Escolha um tamanho</option>
+                                    <option value="17/18">17/18</option>
+                                    <option value="19/20">19/20</option>
+                                    <option value="21/22">21/22</option>
+                                    <option value="23/24">23/24</option>
+                                    <option value="25/26">25/26</option>
+                                    <option value="27/28">27/28</option>
+                                    <option value="29/30">29/30</option>
+                                    <option value="31/32">31/32</option>
+                                </select>
+
+                                <!-- TAMANHO ROUPA -->
+                                <div id="tam-roupa" class="checkBoxes">
+
+                                    <div class="checkBox">
+                                        <div class="values">
+                                            <span>PP</span>
+                                            <input type="checkbox" value="PP">
+                                        </div>
+                                        <div class="values">
+                                            <span>P</span>
+                                            <input type="checkbox" value="P">
+                                        </div>
+                                        <div class="values">
+                                            <span>M</span>
+                                            <input type="checkbox" value="M">
+                                        </div>
+                                        <div class="values">
+                                            <span>G</span>
+                                            <input type="checkbox" value="G">
+                                        </div>
+                                        <div class="values">
+                                            <span>GG</span>
+                                            <input type="checkbox" value="GG">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="tam-roupa-infantil" class="checkBoxes">
+
+                                    <div class="checkBox">
+                                        <div class="values"><span>RN</span><input type="checkbox" value="RN"></div>
+                                        <div class="values"><span>P</span><input type="checkbox" value="P"></div>
+                                        <div class="values"><span>M</span><input type="checkbox" value="M"></div>
+                                        <div class="values"><span>G</span><input type="checkbox" value="G"></div>
+                                        <div class="values"><span>1</span><input type="checkbox" value="1"></div>
+                                        <div class="values"><span>2</span><input type="checkbox" value="2"></div>
+                                        <div class="values"><span>3</span><input type="checkbox" value="3"></div>
+                                        <div class="values"><span>4</span><input type="checkbox" value="4"></div>
+                                        <div class="values"><span>6</span><input type="checkbox" value="6"></div>
+                                        <div class="values"><span>8</span><input type="checkbox" value="8"></div>
+                                        <div class="values"><span>10</span><input type="checkbox" value="10"></div>
+                                        <div class="values"><span>12</span><input type="checkbox" value="12"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <input type="hidden" name="tamanho" id="tamanho-final">
+                        <button type="submit">Cadastrar</button>
+
+                    </div>
 
                 </form>
-            </div>
-        </section>
 
+                <!-- <h1>Banner</h1> -->
 
-        <section class="users" id="users">
+                <form action="#" method="POST" enctype="multipart/form-data" class="form-banner">
 
-            <div class="form-div">
+                    <div class="banner-div">
 
-                <form action="">
+                        <div class="label">
 
-                    <label for="file" id="file-user">
+                            <label id="labelImagemBanner">
 
-                        <i class="bi bi-person-bounding-box"></i>
-                        <span>Adicione um perfil</span>
+                                <i class="bi bi-card-image" id="iconeLabelBanner"></i>
 
-                        <input type="file" name="" id="file" hidden>
+                                <span id="textoLabelBanner">Banner 1920 x 600px*</span>
 
-                    </label>
+                                <input type="file" name="imagem" accept="image/*" required hidden>
 
-                    <input type="text" name="" id="name-user" placeholder="Nome do funcionário" required>
+                                <img id="previewImagemBanner">
 
-                    <input type="tel" name="" id="email-user" placeholder="Email do usuário" required>
+                            </label>
 
-                    <input type="password" name="" id="pwr-user" placeholder="Senha" required>
+                            <button type="submit">Cadastrar</button>
+                        </div>
 
-                    <input type="tel" name="" id="tel-user" placeholder="Número de telefone (opcional)">
+                        <div class="remove-div">
+                            <div class="banner-item" data-id="<?php echo $banner['id']; ?>">
+                                <img src="loja_99_1764644247.png" alt="Banner">
+                                <button class="remover-banner" type="button">Remover</button>
+                            </div>
+                        </div>
 
-                    <input type="text" name="" id="date-user" placeholder="Data de nascimento (opcional)">
-
-                    <!-- <div class="checkboxes">
-
-                        <ul>
-                            <li>
-                                <span>Permitir enviar produtos</span>
-                                <input type="checkbox" checked>
-                            </li>
-                            <li>
-                                <span>Permitir editar produtos</span>
-                                <input type="checkbox" checked>
-                            </li>
-                            <li>
-                                <span>Permitir cadastrar usuários</span>
-                                <input type="checkbox">
-                            </li>
-                        </ul>
-                    </div> -->
-
-                    <button class="submit" id="submit">Criar</button>
+                    </div>
 
                 </form>
-            </div>
 
+            </div>
         </section>
 
         <section class="cog" id="cog">
 
+            <h1>Personalizar</h1>
+
             <div class="form-div">
 
-                <form action="">
+                <form action="#" method="POST" class="form-input" enctype="multipart/form-data">
 
-                    <label for="file" id="file-cog">
+                    <div class="values-create" id="values-create">
 
-                        <i class="bi bi-building-gear"></i>
-                        <span>Adicione uma logo</span>
+                        <div class="input-values-create">
 
-                        <input type="file" name="" id="file" hidden>
+                            <input type="text" name="nome_fantasia" value="BShop"
+                                maxlength="12" required>
 
+                            <input type="text" name="telefone" id="telLabel" value="(99) 9xxxx-xxxx">
+
+                            <select name="categoria" id="categoria" required>
+                                <option value="Sem descrição">Sem
+                                    descrição</option>
+                                <option value="Roupas">Loja de roupas
+                                </option>
+                                <option value="Sapatos">Loja de sapatos
+                                </option>
+                                <option value="Moda e estilo">Roupas e sapatos</option>
+                                <option value="Diversos">Diversos
+                                </option>
+                            </select>
+
+
+                            <input type="hidden" name="loja_id" value="<?php echo $loja_id; ?>">
+
+
+                        </div>
+                        <button type="submit">Salvar Alterações</button>
+                    </div>
+
+                    <label id="labelImagemCog">
+
+                        <i class="bi bi-card-image" id="iconeLabelCog"></i>
+                        <span id="textoLabelCog">Coloque uma imagem*</span>
+
+                        <input type="file" id="inputImagem" name="imagem" accept="image/*" hidden>
+
+                        <img id="previewImagemCog">
                     </label>
 
-                    <input type="text" name="" id="name-user" placeholder="Nome da empresa">
-
-                    <input type="tel" name="" id="tel-user" placeholder="Número de telefone (opcional)">
-
-                    <!-- <input type="text" name="" id="date-user" placeholder="Data de nascimento (opcional)"> -->
-
-                    <button class="submit" id="submit">Salvar</button>
-
                 </form>
+
             </div>
+
+            <!-- <form action="#" method="POST"
+                onsubmit="return confirm('Tem certeza que deseja excluir sua conta? Essa ação não pode ser desfeita!');">
+
+                <button type="submit" class="btn-excluir-conta">
+                    Excluir minha conta
+                </button>
+
+            </form> -->
+
+
 
         </section>
 
         <section class="loja" id="loja">
-
             <div class="msg" id="msg">
-
                 <h1>Você está acessando a loja...</h1>
-
-                <span>Verifique se outra aba está aberta no seu navegador. Caso não esteja, considere como um erro no
-                    sistema ou recursos adicionais que estão sendo enviados ao servidor.</span>
-
+                <span>Verifique se outra aba está aberta no seu navegador. Caso não esteja, considere como um erro
+                    técnico ou que os arquivos ainda estejam sendo enviados ao servidor.</span>
                 <img src="https://png.pngtree.com/png-clipart/20190120/ourmid/pngtree-go-to-bed-sleeping-pig-piggy-pig-sleeping-png-image_493040.png"
                     alt="error">
-
             </div>
         </section>
 
     </main>
 
-    <!-- Editar produto -->
+    <!-- Modais edits -->
 
     <div class="edit-produto-table" id="edit-produto-table">
 
@@ -320,49 +435,91 @@
 
             <div class="form">
 
-                <input type="text" name="" id="" placeholder="Nome do produto">
-                <input type="text" name="" id="" placeholder="Preço do produto">
+                <input type="hidden" id="edit-id">
 
-                <button>Excluir</button>
+                <label>
+                    <i class="bi bi-pencil"></i>
+                    <input type="text" id="edit-nome" placeholder="Nome do produto" maxlength="25">
+                </label>
+
+
+                <label>
+                    <i class="bi bi-pencil"></i>
+                    <input type="number" id="edit-preco" placeholder="Preço do produto" step="0.01" maxlength="6">
+                </label>
+
+                <label class="upload-edit">
+                    <i class="bi bi-image"></i>
+                    <input type="file" id="edit-imagem" accept="image/*" hidden>
+                </label>
+
+                <button id="save-table">Salvar</button>
 
                 <div class="btn-edit-table">
-
-                    <button id="save-table">Salvar</button>
+                    <button id="delete-produto">Excluir</button>
                     <button id="cancel">Cancelar</button>
-
                 </div>
 
             </div>
         </div>
     </div>
 
+    <div class="edit-destaque-create" id="edit-destaque-create">
+
+        <form action="">
+
+            <label for="imageDestaqueEdit" id="imageDestaqueLabel">
+
+                <input type="file" name="" id="imageDestaqueEdit" hidden>
+
+                <i class="bi bi-card-image"></i>
+
+                <span>Adicione uma imagem*</span>
+
+                <img src="" alt="" id="previewImagemDestaqueEdit">
+
+            </label>
+
+            <label for="inputDestaque" id="inputDestaqueLabel">
+                <i class="bi bi-pencil-fill"></i>
+                <input type="text" name="" id="inputDestaque" placeholder="Nome do destaque">
+            </label>
+
+            <button>Salvar</button>
+            <button id="fechar">Fechar</button>
+        </form>
+    </div>
+
 </body>
-
-<script>
-
-    function logout() {
-        location.href = "login.html"
-    }
-</script>
 
 <script src="js/painel.js"></script>
 <script src="js/datas.js"></script>
 <script src="js/editTable.js"></script>
-<!-- <script src="js/links.js"></script> -->
+<script src="js/links.js"></script>
+<script src="js/modais.js"></script>
+
+<!-- Máscara telefone -->
 
 <script>
-    function loja() {
+    document.getElementById("telLabel").addEventListener("input", function () {
+        let v = this.value.replace(/\D/g, "");
+        if (v.length > 11) v = v.slice(0, 11);
 
-        // location.href = "index.html"
-
-        window.open('https://marcos-loja.vercel.app/', '_blank')
-    }
+        if (v.length > 6) {
+            this.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+        } else if (v.length > 2) {
+            this.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+        } else {
+            this.value = v;
+        }
+    });
 </script>
 
+<!-- Tema / Modo claro/escuro -->
 <script>
     function updateIcon(theme) {
         const icon = document.getElementById("themeIcon");
-
+        if (!icon) return;
         if (theme === "light") {
             icon.classList.remove("bi-brightness-high");
             icon.classList.add("bi-moon");
@@ -375,20 +532,209 @@
     function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         const newTheme = currentTheme === "light" ? "dark" : "light";
-
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
-
         updateIcon(newTheme);
     }
-
-    // Carregar o tema salvo ao abrir a página
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-    updateIcon(savedTheme);
-
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
 
+        // Loja - menu e botão
+        const urlLoja = "loja/loja.html";
+
+        const liLoja = document.getElementById("menuLoja");
+        if (liLoja) {
+            liLoja.addEventListener("click", () => window.open(urlLoja, "_blank"));
+            liLoja.querySelector("span").textContent = "Loja";
+        }
+
+        const btnLoja = document.querySelector("#loja button");
+        if (btnLoja) {
+            btnLoja.addEventListener("click", () => window.open(urlLoja, "_blank"));
+        }
+    });
+</script>
+
+<!-- Mostrar imagem no label/input -->
+<script>
+    document.getElementById("labelImagemProd").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const preview = document.getElementById("previewImagemProd");
+                preview.src = e.target.result;
+                preview.style.display = "block"; // mostra a imagem
+
+                document.getElementById("iconeLabelProd").style.display = "none";
+                document.getElementById("textoLabelProd").style.display = "none";
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById("labelImagemBanner").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const preview = document.getElementById("previewImagemBanner");
+                preview.src = e.target.result;
+                preview.style.display = "block"; // mostra a imagem
+
+                document.getElementById("iconeLabelBanner").style.display = "none";
+                document.getElementById("textoLabelBanner").style.display = "none";
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<script>
+    document.getElementById("labelImagemCog").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const preview = document.getElementById("previewImagemCog");
+                preview.src = e.target.result;
+                preview.style.display = "block";
+
+                document.getElementById("iconeLabelCog").style.display = "none";
+                document.getElementById("textoLabelCog").style.display = "none";
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<!-- Select roupas/sapatos -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const selectCategoria = document.getElementById("choose-option");
+        const sapatoAdulto = document.getElementById("tam-sapato");
+        const sapatoInfantil = document.getElementById("tam-sapato-infantil");
+        const roupaAdulto = document.getElementById("tam-roupa");
+        const roupaInfantil = document.getElementById("tam-roupa-infantil");
+
+        const tamanhoFinal = document.getElementById("tamanho-final");
+
+        // Oculta todos
+        function ocultarTudo() {
+            sapatoAdulto.style.display = "none";
+            sapatoInfantil.style.display = "none";
+            roupaAdulto.style.display = "none";
+            roupaInfantil.style.display = "none";
+        }
+
+        ocultarTudo();
+
+        // Monitorar a escolha da categoria
+        selectCategoria.addEventListener("change", () => {
+
+            ocultarTudo();
+            tamanhoFinal.value = ""; // zera o tamanho escolhido
+
+            let categoria = selectCategoria.value;
+
+            if (categoria === "sapato") {
+                sapatoAdulto.style.display = "block";
+            }
+            if (categoria === "sapato-infantil") {
+                sapatoInfantil.style.display = "block";
+            }
+            if (categoria === "roupa") {
+                roupaAdulto.style.display = "block";
+            }
+            if (categoria === "roupa-infantil") {
+                roupaInfantil.style.display = "block";
+            }
+        });
+
+        // Para selects de sapato
+        sapatoAdulto.addEventListener("change", () => {
+            tamanhoFinal.value = sapatoAdulto.value;
+        });
+
+        sapatoInfantil.addEventListener("change", () => {
+            tamanhoFinal.value = sapatoInfantil.value;
+        });
+
+        // Para checkboxes de roupa
+        document.querySelectorAll("#tam-roupa input[type=checkbox]").forEach(chk => {
+            chk.addEventListener("change", () => {
+                let selecionados = [...document.querySelectorAll("#tam-roupa input:checked")].map(e => e.value);
+                tamanhoFinal.value = selecionados.join(",");
+            });
+        });
+
+        // Para roupa infantil
+        document.querySelectorAll("#tam-roupa-infantil input[type=checkbox]").forEach(chk => {
+            chk.addEventListener("change", () => {
+                let selecionados = [...document.querySelectorAll("#tam-roupa-infantil input:checked")].map(e => e.value);
+                tamanhoFinal.value = selecionados.join(",");
+            });
+        });
+
+    });
+</script>
+
+<!-- pesquisa -->
+
+<script>
+    document.getElementById("search").addEventListener("keyup", function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll(".tabela-estilo tbody tr");
+
+        rows.forEach(row => {
+            let text = row.innerText.toLowerCase();
+            row.style.display = text.includes(filter) ? "" : "none";
+        });
+    });
+</script>
+
+<!-- remover Banner -->
+
+<script>
+    document.querySelectorAll(".remover-banner").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const bannerItem = this.closest(".banner-item");
+            const bannerId = bannerItem.getAttribute("data-id");
+
+            if (confirm("Deseja realmente remover este banner?")) {
+                fetch("php/removerBanner.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: "id=" + bannerId
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            bannerItem.remove(); // remove do HTML imediatamente
+                        } else {
+                            alert("Erro ao remover: " + data.msg);
+                        }
+                    })
+                    .catch(err => alert("Erro na requisição: " + err));
+            }
+        });
+    });
+
+</script>
 
 </html>
